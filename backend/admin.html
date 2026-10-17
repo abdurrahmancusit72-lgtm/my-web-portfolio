@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Abdur Rahman</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: radial-gradient(circle at top, #10233f, #05070d 65%);
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            padding: 35px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(100, 170, 255, 0.3);
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0, 120, 255, 0.12);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            margin-bottom: 28px;
+            text-align: center;
+            color: #aab7ca;
+        }
+
+        label {
+            display: block;
+            margin: 16px 0 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            color: #fff;
+            background: #111827;
+            border: 1px solid #34445d;
+            border-radius: 9px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #39a9ff;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 24px;
+            padding: 14px;
+            border: none;
+            border-radius: 9px;
+            color: #fff;
+            background: linear-gradient(90deg, #087cff, #00c8ff);
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
+        #login-status {
+            margin-top: 18px;
+            text-align: center;
+            color: #9fcfff;
+            overflow-wrap: anywhere;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 22px;
+            text-align: center;
+            color: #8bc8ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="login-box">
+        <h1>Admin Login</h1>
+        <p class="subtitle">Abdur Rahman | Portfolio Dashboard</p>
+
+        <form id="admin-login-form">
+            <label for="username">Username</label>
+            <input
+                type="text"
+                id="username"
+                autocomplete="username"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                autocomplete="current-password"
+                required
+            >
+
+            <button type="submit" id="login-button">Login Securely</button>
+            <p id="login-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <a class="back-link" href="index.html">← Back to Portfolio</a>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>
